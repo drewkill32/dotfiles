@@ -1,0 +1,122 @@
+// To view the default settings, hold "alt" while clicking on the "Settings" button.
+// For documentation on these settings, see: https://aka.ms/terminal-documentation
+
+{
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+
+  "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+
+  "profiles": {
+    "defaults": {
+      // Put settings here that you want to apply to all profiles
+      "acrylicOpacity": 0.8,
+      "useAcrylic": true,
+      "colorScheme": "Earthsong"
+    },
+    "list": [
+      {
+        // Make changes here to the powershell.exe profile
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "name": "Windows PowerShell",
+        "commandline": "powershell.exe",
+        "hidden": false
+      },
+      {
+        // Make changes here to the cmd.exe profile
+        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+        "name": "cmd",
+        "commandline": "cmd.exe",
+        "hidden": false
+      },
+      {
+        "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+        "hidden": false,
+        "name": "Azure Cloud Shell",
+        "source": "Windows.Terminal.Azure"
+      },
+      {
+        "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+        "hidden": false,
+        "name": "Ubuntu-18.04",
+        "source": "Windows.Terminal.Wsl"
+      },
+      {
+        "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+        "hidden": false,
+        "name": "PowerShell",
+        "source": "Windows.Terminal.PowershellCore"
+      }
+    ]
+  },
+
+  // Add custom color schemes to this array
+  "schemes": [
+    {
+      "name": "Earthsong",
+      "black": "#121418",
+      "red": "#c94234",
+      "green": "#85c54c",
+      "yellow": "#f5ae2e",
+      "blue": "#1398b9",
+      "purple": "#d0633d",
+      "cyan": "#509552",
+      "white": "#e5c6aa",
+      "brightBlack": "#675f54",
+      "brightRed": "#ff645a",
+      "brightGreen": "#98e036",
+      "brightYellow": "#e0d561",
+      "brightBlue": "#5fdaff",
+      "brightPurple": "#ff9269",
+      "brightCyan": "#84f088",
+      "brightWhite": "#f6f7ec",
+      "background": "#292520",
+      "foreground": "#e5c7a9"
+    },
+    {
+      "name": "Espresso Libre",
+      "black": "#000000",
+      "red": "#cc0000",
+      "green": "#1a921c",
+      "yellow": "#f0e53a",
+      "blue": "#0066ff",
+      "purple": "#c5656b",
+      "cyan": "#06989a",
+      "white": "#d3d7cf",
+      "brightBlack": "#555753",
+      "brightRed": "#ef2929",
+      "brightGreen": "#9aff87",
+      "brightYellow": "#fffb5c",
+      "brightBlue": "#43a8ed",
+      "brightPurple": "#ff818a",
+      "brightCyan": "#34e2e2",
+      "brightWhite": "#eeeeec",
+      "background": "#2a211c",
+      "foreground": "#b8a898"
+    },
+    {
+      "name": "Ollie",
+      "black": "#000000",
+      "red": "#ac2e31",
+      "green": "#31ac61",
+      "yellow": "#ac4300",
+      "blue": "#2d57ac",
+      "purple": "#b08528",
+      "cyan": "#1fa6ac",
+      "white": "#8a8eac",
+      "brightBlack": "#5b3725",
+      "brightRed": "#ff3d48",
+      "brightGreen": "#3bff99",
+      "brightYellow": "#ff5e1e",
+      "brightBlue": "#4488ff",
+      "brightPurple": "#ffc21d",
+      "brightCyan": "#1ffaff",
+      "brightWhite": "#5b6ea7",
+      "background": "#222125",
+      "foreground": "#8a8dae"
+    }
+  ],
+
+  // Add any keybinding overrides to this array.
+  // To unbind a default keybinding, set the command to "unbound"
+  "keybindings": [{ "command": "duplicateTab", "keys": ["ctrl+shift+d"] }]
+}
