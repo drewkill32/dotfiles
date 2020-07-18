@@ -1,5 +1,5 @@
 {
-  "id": "3f574908-cb30-4554-9a77-81a1500a3100",
+  "id": "0cdb4f32-f392-4edc-826f-ef919cd33ebd",
   "name": "My Visual Studio extensions",
   "description": "A collection of my Visual Studio extensions",
   "version": "1.0",
@@ -47,6 +47,10 @@
     {
       "name": "ML.NET Model Builder (Preview)",
       "vsixId": "FE96D051-645F-4309-AE99-107A776B0DA2"
+    },
+    {
+      "name": "Open Command Line",
+      "vsixId": "f4ab1e64-5d35-4f06-bad9-bf414f4b3bbb"
     },
     {
       "name": "Open in Visual Studio Code",
