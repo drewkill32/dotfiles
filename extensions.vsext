@@ -1,0 +1,64 @@
+{
+  "id": "3f574908-cb30-4554-9a77-81a1500a3100",
+  "name": "My Visual Studio extensions",
+  "description": "A collection of my Visual Studio extensions",
+  "version": "1.0",
+  "extensions": [
+    {
+      "name": "Add New File",
+      "vsixId": "2E78AA18-E864-4FBB-B8C8-6186FC865DB3"
+    },
+    {
+      "name": "Azure Data Lake and Stream Analytics Tools",
+      "vsixId": "1e906ff5-9da8-4091-a299-5c253c55fdc9"
+    },
+    {
+      "name": "Cloud Explorer for VS 2019 Preview",
+      "vsixId": "Microsoft.VisualStudio.CloudExplorer.16.0"
+    },
+    {
+      "name": "CodeMaid",
+      "vsixId": "4c82e17d-927e-42d2-8460-b473ac7df316"
+    },
+    {
+      "name": "Extension Manager 2019",
+      "vsixId": "4a196712-2c3f-4730-ad1d-e7cda4185eb2"
+    },
+    {
+      "name": "File Icons",
+      "vsixId": "3a7b4930-a5fb-46ec-a9b8-9610c8f953b8"
+    },
+    {
+      "name": "GitHub Extension for Visual Studio",
+      "vsixId": "c3d3dc68-c977-411f-b3e8-03b0dccf7dfc"
+    },
+    {
+      "name": "Learn the Shortcut",
+      "vsixId": "9da28329-f9d5-4f18-91c3-d3285b103d1a"
+    },
+    {
+      "name": "Live Share",
+      "vsixId": "Microsoft.VisualStudio.LiveShare"
+    },
+    {
+      "name": "Markdown Editor",
+      "vsixId": "9ca64947-e9ca-4543-bfb8-6cce9be19fd6"
+    },
+    {
+      "name": "ML.NET Model Builder (Preview)",
+      "vsixId": "FE96D051-645F-4309-AE99-107A776B0DA2"
+    },
+    {
+      "name": "Open in Visual Studio Code",
+      "vsixId": "e99dde0e-e023-410d-bc5d-3f76db71e3f0"
+    },
+    {
+      "name": "Viasfora",
+      "vsixId": "Winterdom.Viasfora.f7a33795-2b40-4125-856c-89b0bd8cd5ab"
+    },
+    {
+      "name": "Visual Studio IntelliCode",
+      "vsixId": "IntelliCode.VSIX.598224b2-b987-401b-8509-f568d0c0b946"
+    }
+  ]
+}
