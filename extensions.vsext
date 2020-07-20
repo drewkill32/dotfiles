@@ -1,5 +1,5 @@
 {
-  "id": "0cdb4f32-f392-4edc-826f-ef919cd33ebd",
+  "id": "12a4d8b1-f23e-49f7-8c96-c618f0d8f85a",
   "name": "My Visual Studio extensions",
   "description": "A collection of my Visual Studio extensions",
   "version": "1.0",
@@ -7,14 +7,6 @@
     {
       "name": "Add New File",
       "vsixId": "2E78AA18-E864-4FBB-B8C8-6186FC865DB3"
-    },
-    {
-      "name": "Azure Data Lake and Stream Analytics Tools",
-      "vsixId": "1e906ff5-9da8-4091-a299-5c253c55fdc9"
-    },
-    {
-      "name": "Cloud Explorer for VS 2019 Preview",
-      "vsixId": "Microsoft.VisualStudio.CloudExplorer.16.0"
     },
     {
       "name": "CodeMaid",
@@ -33,20 +25,16 @@
       "vsixId": "c3d3dc68-c977-411f-b3e8-03b0dccf7dfc"
     },
     {
+      "name": "Indent Guides",
+      "vsixId": "IndentGuide.SteveDower.0a67eb97-becd-451f-aa29-851d9fe5dd2b"
+    },
+    {
       "name": "Learn the Shortcut",
       "vsixId": "9da28329-f9d5-4f18-91c3-d3285b103d1a"
     },
     {
-      "name": "Live Share",
-      "vsixId": "Microsoft.VisualStudio.LiveShare"
-    },
-    {
       "name": "Markdown Editor",
       "vsixId": "9ca64947-e9ca-4543-bfb8-6cce9be19fd6"
-    },
-    {
-      "name": "ML.NET Model Builder (Preview)",
-      "vsixId": "FE96D051-645F-4309-AE99-107A776B0DA2"
     },
     {
       "name": "Open Command Line",
@@ -63,6 +51,10 @@
     {
       "name": "Visual Studio IntelliCode",
       "vsixId": "IntelliCode.VSIX.598224b2-b987-401b-8509-f568d0c0b946"
+    },
+    {
+      "name": "VSColorOutput",
+      "vsixId": "CD56B219-38CB-482A-9B2D-7582DF4AAF1E"
     }
   ]
 }
