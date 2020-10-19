@@ -1,5 +1,5 @@
 {
-  "id": "1b10a569-7b4c-403f-8105-d35a364f0434",
+  "id": "12a4d8b1-f23e-49f7-8c96-c618f0d8f85a",
   "name": "My Visual Studio extensions",
   "description": "A collection of my Visual Studio extensions",
   "version": "1.0",
@@ -25,12 +25,12 @@
       "vsixId": "c3d3dc68-c977-411f-b3e8-03b0dccf7dfc"
     },
     {
-      "name": "Learn the Shortcut",
-      "vsixId": "9da28329-f9d5-4f18-91c3-d3285b103d1a"
+      "name": "Indent Guides",
+      "vsixId": "IndentGuide.SteveDower.0a67eb97-becd-451f-aa29-851d9fe5dd2b"
     },
     {
-      "name": "Live Share",
-      "vsixId": "Microsoft.VisualStudio.LiveShare"
+      "name": "Learn the Shortcut",
+      "vsixId": "9da28329-f9d5-4f18-91c3-d3285b103d1a"
     },
     {
       "name": "Markdown Editor",
