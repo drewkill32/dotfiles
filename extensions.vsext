@@ -1,5 +1,5 @@
 {
-  "id": "0cdb4f32-f392-4edc-826f-ef919cd33ebd",
+  "id": "1b10a569-7b4c-403f-8105-d35a364f0434",
   "name": "My Visual Studio extensions",
   "description": "A collection of my Visual Studio extensions",
   "version": "1.0",
@@ -7,14 +7,6 @@
     {
       "name": "Add New File",
       "vsixId": "2E78AA18-E864-4FBB-B8C8-6186FC865DB3"
-    },
-    {
-      "name": "Azure Data Lake and Stream Analytics Tools",
-      "vsixId": "1e906ff5-9da8-4091-a299-5c253c55fdc9"
-    },
-    {
-      "name": "Cloud Explorer for VS 2019 Preview",
-      "vsixId": "Microsoft.VisualStudio.CloudExplorer.16.0"
     },
     {
       "name": "CodeMaid",
@@ -45,10 +37,6 @@
       "vsixId": "9ca64947-e9ca-4543-bfb8-6cce9be19fd6"
     },
     {
-      "name": "ML.NET Model Builder (Preview)",
-      "vsixId": "FE96D051-645F-4309-AE99-107A776B0DA2"
-    },
-    {
       "name": "Open Command Line",
       "vsixId": "f4ab1e64-5d35-4f06-bad9-bf414f4b3bbb"
     },
@@ -63,6 +51,10 @@
     {
       "name": "Visual Studio IntelliCode",
       "vsixId": "IntelliCode.VSIX.598224b2-b987-401b-8509-f568d0c0b946"
+    },
+    {
+      "name": "VSColorOutput",
+      "vsixId": "CD56B219-38CB-482A-9B2D-7582DF4AAF1E"
     }
   ]
 }
