@@ -19,7 +19,7 @@
 	up = push -u origin HEAD
 	ac = !git add -A && git commit -m
 
-    [pager]
+[pager]
     diff = delta
     log = delta
     reflog = delta
@@ -47,9 +47,13 @@
     diffFilter = delta --color-only
 
 [diff]
-	tool = vsdiffmerge
-[difftool]
-	prompt = true
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
 [init]
 	defaultBranch = main
 [safe]
