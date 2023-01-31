@@ -1,4 +1,4 @@
-(@(& 'C:/Users/adk/AppData/Local/Programs/oh-my-posh/bin/oh-my-posh.exe' init pwsh --config='C:\Users\adk\.oh-my-posh\oh-my-posh.json' --print) -join "`n") | Invoke-Expression
+(@(& 'C:/Users/adk/AppData/Local/Programs/oh-my-posh/bin/oh-my-posh.exe' init pwsh --config='D:\Code\dotfiles\oh-my-posh.json' --print) -join "`n") | Invoke-Expression
 
 if ($host.Name -eq 'ConsoleHost') {
   Import-Module PSReadLine

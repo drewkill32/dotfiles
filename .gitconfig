@@ -52,3 +52,5 @@
 	prompt = true
 [init]
 	defaultBranch = main
+[safe]
+	directory = D:/Code
