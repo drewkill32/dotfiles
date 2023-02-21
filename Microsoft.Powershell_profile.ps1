@@ -37,3 +37,13 @@ if (Test-Path($ChocolateyProfile)) {
 
 
 
+function Update-Paths {
+  $paths = 'Machine', 'User' |
+  ForEach-Object {
+    ([System.Environment]::GetEnvironmentVariable('Path', $_)) -split ';'
+  } |
+  Select-Object -Unique
+  $Env:PATH = $paths -join ';'
+}
+
+
