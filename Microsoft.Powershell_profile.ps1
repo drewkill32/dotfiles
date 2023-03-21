@@ -26,7 +26,7 @@ $alaises = @(
   [pscustomobject]@{ Name = 'sql'; Value = 'Invoke-Sqlcmd' }
 )
 $alaises | ForEach-Object {
-  if (!(Get-Alias -Name $_.Name)) {
+  if (!(Get-Alias -Name $_.Name -ErrorAction Ignore)) {
     Set-Alias -Name $_.Name -Value $_.Value
   }
 }
