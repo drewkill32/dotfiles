@@ -20,14 +20,14 @@ Set-PSReadLineOption -EditMode Windows -WarningAction Ignore
 
 # Alaises
 $alaises = @(
-  {Name = 'touch'; Value 'New-Item'}
-  {Name = 'grep'; Value 'Select-String'}
-  {Name = 'man'; Value 'Get-Help'}
-  {Name = 'sql'; Value 'Invoke-Sqlcmd'}
-  )
-$alaises | Foreach-Object {
+  [pscustomobject]@{ Name = 'touch'; Value = 'New-Item' }
+  [pscustomobject]@{ Name = 'grep'; Value = 'Select-String' }
+  [pscustomobject]@{ Name = 'man'; Value = 'Get-Help' }
+  [pscustomobject]@{ Name = 'sql'; Value = 'Invoke-Sqlcmd' }
+)
+$alaises | ForEach-Object {
   if (!(Get-Alias -Name $_.Name)) {
-    Set-Alias -Name $_.Name -Value $_Value
+    Set-Alias -Name $_.Name -Value $_.Value
   }
 }
 
