@@ -19,10 +19,17 @@ Set-PSReadLineOption -EditMode Windows -WarningAction Ignore
 
 
 # Alaises
-Set-Alias -Name touch -Value New-Item
-Set-Alias -Name grep -Value Select-String
-Set-Alias -Name man -Value Get-Help
-Set-Alias -Name sql -Value Invoke-SpmSql
+$alaises = @(
+  {Name = 'touch'; Value 'New-Item'}
+  {Name = 'grep'; Value 'Select-String'}
+  {Name = 'man'; Value 'Get-Help'}
+  {Name = 'sql'; Value 'Invoke-Sqlcmd'}
+  )
+$alaises | Foreach-Object {
+  if (!(Get-Alias -Name $_.Name)) {
+    Set-Alias -Name $_.Name -Value $_Value
+  }
+}
 
 
 # Import the Chocolatey Profile that contains the necessary code to enable
