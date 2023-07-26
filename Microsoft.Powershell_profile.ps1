@@ -1,4 +1,24 @@
+function Update-Paths {
+  $paths = 'Machine', 'User' |
+  ForEach-Object {
+    ([System.Environment]::GetEnvironmentVariable('Path', $_)) -split ';'
+  } |
+  Select-Object -Unique
+  $Env:PATH = $paths -join ';'
+}
+
+if ((Get-PSRepository PSGallery).InstallationPolicy -ne "Trusted") {
+  Set-PSRepository PSGallery -InstallationPolicy Trusted
+}
+
+if (!(Get-Command oh-my-posh -ErrorAction Ignore)) {
+  winget install JanDeDobbeleer.OhMyPosh -s winget
+  Update-Paths
+}
+
 $poshProfile = Join-Path $PSScriptRoot -ChildPath oh-my-posh.json
+
+
 (@(& oh-my-posh init pwsh --config $poshProfile --print) -join "`n") | Invoke-Expression
 
 if ($host.Name -eq 'ConsoleHost') {
@@ -6,11 +26,18 @@ if ($host.Name -eq 'ConsoleHost') {
 }
 
 if (!(Get-Module -ListAvailable -Name Terminal-Icons)) {
+  Install-Module Terminal-Icons -Scope CurrentUser
   Import-Module Terminal-Icons
 }
 
 if (!(Get-Module -ListAvailable -Name Posh-Git)) {
+  Install-Module Posh-Git -Scope CurrentUser
   Import-Module Posh-Git
+} 
+
+if (!(Get-Module -Name PSReadLine -ListAvailable | Where-Object Version -ge 2.2.6)) {
+  Install-Module PSReadLine -Scope CurrentUser -MinimumVersion 2.2.6 -Force
+  Import-Module PSReadLine
 } 
 
 Set-PSReadLineOption -PredictionSource History -WarningAction Ignore
@@ -32,25 +59,6 @@ $alaises | ForEach-Object {
 }
 
 
-# Import the Chocolatey Profile that contains the necessary code to enable
-# tab-completions to function for `choco`.
-# Be aware that if you are missing these lines from your profile, tab completion
-# for `choco` will not function.
-# See https://ch0.co/tab-completion for details.
-$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
-if (Test-Path($ChocolateyProfile)) {
-  Import-Module "$ChocolateyProfile"
-}
 
-
-
-function Update-Paths {
-  $paths = 'Machine', 'User' |
-  ForEach-Object {
-    ([System.Environment]::GetEnvironmentVariable('Path', $_)) -split ';'
-  } |
-  Select-Object -Unique
-  $Env:PATH = $paths -join ';'
-}
 
 
