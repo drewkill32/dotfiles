@@ -33,13 +33,13 @@ if (!(Get-Module -Name PSReadLine -ListAvailable | Where-Object Version -GE 2.2.
     Install-Module PSReadLine -Scope CurrentUser -MinimumVersion 2.2.6 -Force
 } 
   
-if (Get-Module -Name PSReadLine | Where-Object Version -GE 2.2.6) {
+if (!(Get-Module -Name PSReadLine | Where-Object Version -GE 2.2.6)) {
     Import-Module PSReadLine -MinimumVersion 2.2.6 -Force -NoClobber
 }
 
 
 if (!(Test-Path $PROFILE)) {
-    New-Item -ItemType File -Path $PROFILE
+    New-Item -ItemType File -Path $PROFILE | Out-Null
 }
 
 $content = Get-Content $PROFILE
