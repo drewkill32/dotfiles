@@ -1,0 +1,310 @@
+"" .ideavimrc - Matt Chapman
+
+
+"" Base Settings
+"" ========================================================
+
+set scrolloff=10
+set linenumber
+set showmode
+set showcmd
+
+set smartcase
+set incsearch
+set hlsearch
+set visualbell
+
+" Use system clipboard
+set clipboard^=unnamed,unnamedplus
+let mapleader = " "
+" use the black hole clipboard for deletes and changes
+
+
+
+"" Plugin Settings
+"" ========================================================
+
+set surround
+set highlightedyank
+set nerdtree
+
+" Easymotion settings
+set notimeout
+
+" Which-key settings
+set which-key
+let g:WhichKey_FontSize = 18
+let g:WhichKey_CommandColor = "#41ead4"
+let g:WhichKey_PrefixColor = "#f335b2"
+
+let g:WhichKey_SortOrder = "by_key_prefix_first"
+
+let g:WhichKeyDesc_leader = "<leader> Leader key"
+
+let g:WhichKeyDesc_leader = "<leader>x Open file explorer"
+
+let g:WhichKeyDesc_cleanup = "<leader>c Cleanup"
+let g:WhichKeyDesc_cleanup_rearrange_code = "<leader>ca Rearrange Code"
+let g:WhichKeyDesc_cleanup_reformat_code = "<leader>cf Reformat Code"
+
+let g:WhichKeyDesc_fold = "<leader>z Folding"
+let g:WhichKeyDesc_fold_all = "<leader>zc Fold all regions"
+let g:WhichKeyDesc_unfold_all = "<leader>zo Unfold all regions"
+
+let g:WhichKeyDesc_window = "<leader>w Window splits"
+let g:WhichKeyDesc_window_split_vertically = "<leader>wv Split vertically"
+let g:WhichKeyDesc_window_split_horizontally = "<leader>wh Split horizontally"
+let g:WhichKeyDesc_window_split_unsplit = "<leader>wu Unsplit"
+let g:WhichKeyDesc_window_split_move_editor = "<leader>wm Move editor to opposite tab group"
+
+
+let g:WhichKeyDesc_debug = "<leader>d Debug Options"
+let g:WhichKeyDesc_debug_toggle_breakpoint =  "<leader>db Toggle Breakpoint" 
+let g:WhichKeyDesc_debug_edit_bookmark = "<leader>de Edit Bookmark" 
+let g:WhichKeyDesc_debug_toogle_bookmark = "<leader>dk Toggle Bookmark" 
+
+let g:WhichKeyDesc_action= "<leader>a Actions"
+let g:WhichKeyDesc_action_context_menu = "<leader>am Open context menu"
+let g:WhichKeyDesc_action_close_tab = "<leader>aq Close Tab"
+let g:WhichKeyDesc_action_context_menu = "<leader>ac Clear Search highlight"
+let g:WhichKeyDesc_action_search = "<leader>as Open command modal"
+
+let g:WhichKeyDesc_file_quickLook = "<leader><leader> Recent files"
+
+let g:WhichKeyDesc_file_nav = "<leader>f File navigation"
+let g:WhichKeyDesc_file_nav_goto_file = "<leader>ff Go to file"
+let g:WhichKeyDesc_file_nav_goto_content = "<leader>fc Search for file content"
+let g:WhichKeyDesc_file_nav_show_recent_files = "<leader>fr Show recent files"
+let g:WhichKeyDesc_file_nav_show_recent_locations = "<leader>fl Show recent locations"
+
+let g:WhichKeyDesc_close_tab = "<leader>q Close active tab"
+
+let g:WhichKeyDesc_refactoring = "<leader>r Refactoring menu"
+let g:WhichKeyDesc_refactoring_rename = "<leader>rn Rename element"
+let g:WhichKeyDesc_refactoring_method = "<leader>rm Extract method"
+let g:WhichKeyDesc_refactoring_variable = "<leader>rv Introduce variable"
+let g:WhichKeyDesc_refactoring_field = "<leader>rf Introduce field"
+let g:WhichKeyDesc_refactoring_signature = "<leader>rs Change signature"
+let g:WhichKeyDesc_refactoring_all = "<leader>rr Open refactorings list"
+
+let g:WhichKeyDesc_goto = "<leader>g Go to X"
+let g:WhichKeyDesc_goto_declaration = "<leader>gd Go to Definition"
+let g:WhichKeyDesc_goto_type_declaration = "<leader>gy Go to Type Definition"
+let g:WhichKeyDesc_goto_implementation = "<leader>gi Go to Implementation"
+let g:WhichKeyDesc_goto_usages = "<leader>gu Go to Usages"
+let g:WhichKeyDesc_goto_test = "<leader>gt Go to Test"
+let g:WhichKeyDesc_goto_back = "<leader>gb Go Back"
+let g:WhichKeyDesc_goto_forward = "<leader>gf Go Forward"
+let g:WhichKeyDesc_goto_peek_definition = "<leader>gp Peek Definition"
+let g:WhichKeyDesc_harpooner = "<leader>h Harpooner"
+
+let g:WhichKeyDesc_harpooner_menu = "<leader>hm Harpooner Quick Menu"
+let g:WhichKeyDesc_harpooner_add  = "<leader>ha Add File"
+let g:WhichKeyDesc_harpooner_remove = "<leader>hr Remove File"
+let g:WhichKeyDesc_harpooner_next = "<leader>hn Next File"
+let g:WhichKeyDesc_harpooner_prev = "<leader>hp Prev File"
+let g:WhichKeyDesc_harpooner_file_0 = "<leader>h1 File 0"
+let g:WhichKeyDesc_harpooner_file_1 = "<leader>h2 File 1"
+let g:WhichKeyDesc_harpooner_file_2 = "<leader>h3 File 2"
+let g:WhichKeyDesc_harpooner_file_3 = "<leader>h4 File 3"
+
+
+
+
+
+" Key mappings
+" ========================================================
+" move to the beginning of the next word
+nmap w [w
+
+" move to the end of the next word
+nmap e ]w
+
+" move to the beginning of the previous word
+nmap b [b
+
+" move to the end of the previous word
+nmap ge ]b
+
+
+inoremap <C-j> <C-p>
+inoremap <C-k> <C-n>
+
+" Tab navigation
+" nnoremap <C-n> :tabnext<CR>
+" nnoremap <C-p> :tabprev<CR>
+
+" Pane navigation
+nnoremap <A-h> <C-w>h
+nnoremap <A-l> <C-w>l
+nnoremap <A-k> <C-w>k
+nnoremap <A-j> <C-w>j
+
+" add a semi-colon to the end of the line
+imap <C-;> <Esc>A;<Esc> 
+
+" Jump between methods
+nmap [[ <Action>(MethodUp)
+nmap ]] <Action>(MethodDown)
+
+
+vnoremap < <gv
+vnoremap > >gv
+
+
+
+  
+
+
+inoremap <C-s> <Esc>:action SaveDocument<CR>l
+nnoremap <C-s> :action SaveDocument<CR>
+
+nmap <C-h> <action>(MoveStatementUp)
+nmap <C-l> <action>(MoveStatementDown)
+map <C-S-j> <action>(EditorDuplicate)
+nmap <C-k> <action>(MoveLineUp)
+nmap <C-j> <action>(MoveLineDown)
+vmap <C-j> <Action>(SelectNextOccurrence)
+vmap <C-k> <Action>(SelectPreviousOccurrence)
+vmap <C-S-a> <action>(SelectAllOccurrences)
+nmap <C-a> <action>($SelectAll)
+nmap <C-[> <action>(EditorCompleteStatement)
+imap <C-S-j> <action>(EditorCloneCaretBelow)
+"" Leader commands
+"" ========================================================
+
+" Comment lines
+map <leader>ca <action>(RearrangeCode)
+map <leader>cf <action>(ReformatCode)
+vmap <leader>cc <action>(CommentByLineComment)
+
+" go to the start and end of the line
+nnoremap H ^
+nnoremap L $
+
+" Open NERDTree (use q to exit)
+map <leader>x :NERDTreeToggle<CR>
+
+" Folding
+map <leader>zc :action CollapseAllRegions<CR>
+map <leader>zo :action ExpandAllRegions<CR>
+
+" Window splits
+map <leader>wv <Action>(SplitVertically)
+map <leader>ws <Action>(SplitHorizontally)
+map <leader>wu <Action>(Unsplit)
+map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
+map <leader>wn <Action>(NextSplitter)
+map <C-S-h> <C-w>h
+map <C-S-l> <C-w>l
+
+
+" Debug options
+map <leader>db <action>(ToggleLineBreakpoint)
+map <leader>dk <action>(ToggleBookmark)
+map <leader>de <action>(EditBookmark)
+
+" Harpooner
+" Toggle Harpooner menu
+nmap <leader>hm <action>(HarpoonerToggleQuickMenu)
+
+" Add/remove current file to Harpooner
+nmap <leader>ha <action>(HarpoonerAddFile)
+nmap <leader>hr <action>(HarpoonerRemoveFile)
+
+" Navigate to marked files
+nmap <M-j> <action>(HarpoonerOpenFile0)
+nmap <M-k> <action>(HarpoonerOpenFile1)
+nmap <M-l> <action>(HarpoonerOpenFile2)
+nmap <M-;> <action>(HarpoonerOpenFile3)
+
+" Cycle through files
+nmap <leader>hn <action>(HarpoonerNextFileAction)
+nmap <leader>hp <action>(HarpoonerPreviousFileAction)
+
+" Clear Harpooner menu
+nmap <leader>hc <action>(HarpoonerClearMenu)
+
+
+" Actions
+map <leader>am <action>(ShowIntentionActions)
+map <leader>aq <action>(CloseContent)
+map <leader>as <action>(SearchEverywhere)
+map <leader>ac :noh<CR>
+
+" File navigation
+map <leader>ff <action>(GotoFile)
+map <leader>fr <action>(RecentFiles)
+map <leader>fc <action>(FindInPath)
+map <leader><leader> <Action>(RecentFiles)
+map <leader>fl <action>(RecentLocations)
+map <leader>fs <action>(FindInPath)
+
+" Close active tab
+map <leader>q <action>(CloseContent)
+
+" Refactoring
+map <leader>rv <Action>(IntroduceVariable)
+map <leader>rf <Action>(IntroduceField)
+map <leader>rs <Action>(ChangeSignature)
+map <leader>rn <Action>(RenameElement)
+map <leader>rm <Action>(ExtractMethod)
+map <leader>rl <Action>(RenameFile)
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+
+" Go to code
+nmap <leader>gy <Action>(GotoTypeDeclaration)
+nmap <leader>gd <Action>(GotoDeclaration)
+nmap <leader>gi <Action>(GotoImplementation)
+nmap <leader>gu <Action>(ShowUsages)
+nmap <leader>gt <Action>(GotoTest)
+nmap <leader>gf <Action>(Forward)
+nmap <leader>g; <Action>(JumpToLastChange)
+nmap <leader>g, <Action>(JumpToNextChange)
+nmap <leader>gp <Action>(QuickImplementations)
+nmap <C-i> <Action>(Forward)
+nmap <C-o> <Action>(Back)
+nmap <leader>gb <Action>(Back)
+nmap <leader>gs <Action>(GotoSymbol)
+
+" Tests
+let g:WhichKeyDesc_tests = "<leader>t Tests"
+
+let g:WhichKeyDesc_tests_run_test = "<leader>tr Run Tests"
+map <leader>tr <Action>(RiderUnitTestRunContextAction)
+
+let g:WhichKeyDesc_tests_debug_test = "<leader>td Debug Tests"
+map <leader>td <Action>(RiderUnitTestDebugContextAction)
+
+let g:WhichKeyDesc_tests_explorer_test = "<leader>te Test Explorer"
+map <leader>te <Action>(RiderUnitTestFocusExplorerAction)
+
+let g:WhichKeyDesc_tests_cover_test = "<leader>tc Cover Test"
+map <leader>tc <Action>(RiderUnitTestCoverContextAction)
+
+
+" Errors
+let g:WhichKeyDesc_errors = "<leader>e Error navigation"
+
+let g:WhichKeyDesc_errors_next = "<leader>en Go to next error in solution"
+map <leader>en <Action>(ReSharperGotoNextErrorInSolution)
+
+let g:WhichKeyDesc_errors_prev = "<leader>ep Go to previous error in solution"
+map <leader>ep <Action>(ReSharperGotoPrevErrorInSolution)
+
+" New
+let g:WhichKeyDesc_new = "<leader>n New" 
+
+let g:WhichKeyDesc_new_class = "<leader>nf New Class" 
+map <leader>nf <Action>(NewElement)
+
+" IdeaVim
+map <leader>vr <Action>(IdeaVim.ReloadVimRc.reload)
+map <leader>vf <Action>(VimFindActionIdAction) 
+map <leader>ve :edit ~/.ideavimrc<CR>
+
+map <leader>oo <Action>(FileStructurePopup)
+
+" create a new line above and below and stay in normal mode
+nnoremap <CR> o<Esc>
+nnoremap <S-CR> O<Esc>
